@@ -10,6 +10,7 @@ export default function Home({posts}) {
     <div className="w-4/5 mx-auto mt-5">
         <Head>
             <title>ToMyZPM.pl - Aktualności</title>
+            <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
         <h1 className="text-3xl">Aktualności</h1>
        <div className="grid md:grid-cols-2 xl:grid-cols-4 mt-10">
