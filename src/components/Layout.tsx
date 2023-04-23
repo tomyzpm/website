@@ -17,7 +17,7 @@ const Navbar = () => {
         <nav className="fixed top-0 left-0 w-full h-44 bg-white border-b sm:border-none">
             <div className="flex justify-center">
                 <div className="flex items-center">
-                    <Image src={logoImg} className="w-32" />
+                    <Image src={logoImg} className="w-32" alt="logo" />
                     <span className="brand sm:block hidden">
                     STOWARZYSZENIE PRZYJACIÓŁ PAŁACU MŁODZIEŻY W WARSZAWIE
                         <br /> "TO MY Z PAŁACU MŁODZIEŻY"

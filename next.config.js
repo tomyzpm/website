@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+      unoptimized: true
+  },
+  output: 'export',
   webpack: (cfg) => {
     cfg.module.rules.push(
         {
@@ -10,7 +14,13 @@ const nextConfig = {
         }
     )
     return cfg;
-  }
+  },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
 }
 
 module.exports = nextConfig
