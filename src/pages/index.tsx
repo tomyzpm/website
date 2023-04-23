@@ -3,8 +3,14 @@ import Link from "next/link";
 import * as fs from "fs";
 import matter from 'gray-matter'
 import Head from "next/head";
+import {useEffect} from "react";
 
 export default function Home({posts}) {
+    useEffect(() => {
+        if(typeof window !== 'undefined' && window.netlifyIdentity) {
+            window.netlifyIdentity.setLocale('pl');
+        }
+    }, [])
   return (
    <Layout>
     <div className="w-4/5 mx-auto mt-5">
