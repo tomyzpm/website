@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+locale: pl
+logo_url: /logo.png
+media_folder: public/cms-media
+collections:
+  - label: Aktualności
+    name: "aktualnosci"
+    folder: "content/posts"
+    create: true
+    identifier_field: name
+    fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Data publikacji", name: "date", widget: "datetime" }
+      - { label: "Obrazek artykułu", name: "thumbnailUrl", widget: "image" }
+      - { label: "Treść", name: "body", widget: "markdown" }
+  - label: Strony
+    name: strony
+    files:
+      - label: "O nas"
+        name: "o-nas"
+        file: "content/o-nas.md"
+        fields:
+          - { label: "Treść", name: "body", widget: "markdown" }
+      - label: "Dołacz do nas"
+        name: "dolacz-do-nas"
+        file: "content/dolacz-do-nas.md"
+        fields:
+          - { label: "Treść", name: "body", widget: "markdown" }
+      - label: "Kontakt"
+        name: "kontakt"
+        file: "content/kontakt.md"
+        fields:
+          - { label: "Treść", name: "body", widget: "markdown" }
+      - label: "Galeria"
+        name: "galeria"
+        file: "content/galeria.md"
+        fields:
+          - label: Zdjęcia
+            name: imagesList
+            widget: list
+            fields:
+              - { label: Zdjęcie, name: imageUrl, widget: image }
+              - { label: Data, name: date, widget: datetime }
+              - { label: Opis zdjęcia, name: caption, widget: string }
