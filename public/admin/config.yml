@@ -1,5 +1,7 @@
 backend:
   name: git-gateway
+  repo: tomyzpm/website
+  branch: main
 locale: pl
 logo_url: /logo.png
 media_folder: public/cms-media
